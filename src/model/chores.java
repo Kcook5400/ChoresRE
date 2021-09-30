@@ -15,17 +15,12 @@ import javax.persistence.Table;
  * Sep 2, 2021
  */
 @Entity
-@Table(name = "chores")
 public class chores {
 	@Id
 	@GeneratedValue
-	@Column(name="ID")
 	private int ID;
-	@Column(name="NAME")
 	private String name;
-	@Column(name="ASSIGNED")
 	private String assigned;
-	@Column(name="DUEDATE")
 	private LocalDate dueDate;
 	
 	/**

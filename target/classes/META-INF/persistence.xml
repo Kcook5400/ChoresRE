@@ -11,6 +11,7 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/chores"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value="Emerson21$"/>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
 		</properties>
 	</persistence-unit>
 </persistence>
