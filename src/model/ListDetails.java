@@ -30,7 +30,7 @@ import javax.persistence.OneToOne;
 		private LocalDate dueDate;
 		@OneToOne(cascade=CascadeType.PERSIST)
 		private Assignee assignee;
-		@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.LAZY)
+		@OneToMany(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
 		private List<chores> listOfitems;
 		
 
