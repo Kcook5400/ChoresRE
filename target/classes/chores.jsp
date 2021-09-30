@@ -16,6 +16,7 @@
 <td> <input type = "radio" name = "ID" value="${currentitem.ID}"></td>
 <td><strong>Name:</strong> ${currentitem.name}</td>&emsp; 
 <td><strong>Assigned:</strong> ${currentitem.assigned}</td>
+<td><strong>Due Date:</strong> ${currentitem.dueDate}</td>
 </tr>
 </c:forEach>
 

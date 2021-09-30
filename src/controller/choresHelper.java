@@ -32,12 +32,10 @@ public List<chores> showAllItems(){
 public void deleteItem(chores toDelete) {
 	EntityManager em = emfactory.createEntityManager();
 	em.getTransaction().begin();
-	TypedQuery<chores> typedQuery = em.createQuery("select ch from chores ch where ch.name = :selectedname and ch.assigned = :selectedassigned and ch.timeToComplete = :selectedtimeToComplete and ch.ageRequirement = :selectedageRequirement", chores.class);
+	TypedQuery<chores> typedQuery = em.createQuery("select ch from chores ch where ch.name = :selectedname and ch.assigned = :selectedassigned", chores.class);
 	
 	typedQuery.setParameter("selectedname", toDelete.getName());
 	typedQuery.setParameter("selectedassigned", toDelete.getAssigned());
-	typedQuery.setParameter("selectedtimeToComplete", toDelete.getTimeToComplete());
-	typedQuery.setParameter("selectedageRequirement", toDelete.getAgeRequirement());
 	
 	typedQuery.setMaxResults(1);
 	

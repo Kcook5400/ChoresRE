@@ -1,5 +1,7 @@
 package model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,12 +23,11 @@ public class chores {
 	private int ID;
 	@Column(name="NAME")
 	private String name;
-	@Column(name="TIMETOCOMPLETE")
-	private int timeToComplete;
-	@Column(name="AGEREQUIREMENT")
-	private int ageRequirement;
 	@Column(name="ASSIGNED")
 	private String assigned;
+	@Column(name="DUEDATE")
+	private LocalDate dueDate;
+	
 	/**
 	 * 
 	 */
@@ -34,33 +35,21 @@ public class chores {
 		super();
 	}
 	
-	
 
-	/**
-	 * @param iD
-	 * @param name
-	 * @param timeToComplete
-	 * @param ageRequirement
-	 * @param assigned
-	 */
-	public chores(int iD, String name, int timeToComplete, int ageRequirement, String assigned) {
+	public chores(int iD, String name, String assigned) {
 		super();
 		ID = iD;
 		this.name = name;
-		this.timeToComplete = timeToComplete;
-		this.ageRequirement = ageRequirement;
 		this.assigned = assigned;
 	}
-
-
-
-	public chores(int ageRequirement, String assigned, String name, int timeToComplete) {
+	public chores(String name, String assigned, LocalDate date) {
 		super();
 		this.name = name;
-		this.timeToComplete = timeToComplete;
-		this.ageRequirement = ageRequirement;
 		this.assigned = assigned;
+		this.dueDate=date;
 	}
+	
+	
 	public int getID() {
 		return ID;
 	}
@@ -73,42 +62,32 @@ public class chores {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getTimeToComplete() {
-		return timeToComplete;
-	}
-	public void setTimeToComplete(int timeToComplete) {
-		this.timeToComplete = timeToComplete;
-	}
-	public int getAgeRequirement() {
-		return ageRequirement;
-	}
-	public void setAgeRequirement(int ageRequirement) {
-		this.ageRequirement = ageRequirement;
-	}
 	public String getAssigned() {
 		return assigned;
 	}
 	public void setAssigned(String assigned) {
 		this.assigned = assigned;
+	}		
+	
+	public LocalDate getDueDate() {
+		return dueDate;
 	}
-	
-	public chores(String name, String assigned, int timeToComplete, int ageRequirement) {
-		super();
-		this.name = name;
-		this.assigned = assigned;
-		this.timeToComplete = timeToComplete;
-		this.ageRequirement = ageRequirement;
+
+
+	public void setDueDate(LocalDate dueDate) {
+		this.dueDate = dueDate;
 	}
-	
-	
+
+
 	public String returnChoreDetails() {
-		return this.name +": " + this.assigned + ": " + this.timeToComplete + ": " + this.ageRequirement;}
+		return this.name +": " + this.assigned;}
+
 
 	@Override
 	public String toString() {
-		return "chores [ID=" + ID + ", name=" + name + ", timeToComplete=" + timeToComplete + ", ageRequirement="
-				+ ageRequirement + ", assigned=" + assigned + "]";
+		return "chores [ID=" + ID + ", name=" + name + ", assigned=" + assigned + ", dueDate=" + dueDate + "]";
 	}
-	
+
+
 
 }

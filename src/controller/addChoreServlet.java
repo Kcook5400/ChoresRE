@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,10 +31,18 @@ public class addChoreServlet extends HttpServlet {
 				
 		String chore = request.getParameter("chore");
 		String assigned = request.getParameter("assigned");
-		int timeToComplete = 1;
-		int ageRequirement = 1;
+		String month = request.getParameter("month");
+		String day = request.getParameter("day");
+		String year = request.getParameter("year");
+		LocalDate ld;
+		try {
+			ld = LocalDate.of(Integer.parseInt(year),Integer.parseInt(month), Integer.parseInt(day));
+			}
+		catch (NumberFormatException ex) {
+			ld = LocalDate.now();
+			}
 		
-		chores ch = new chores(chore, assigned, timeToComplete, ageRequirement);
+		chores ch = new chores(chore, assigned, ld);
 		
 		choresHelper dao = new choresHelper();
 		

@@ -3,11 +3,13 @@
 	<persistence-unit name="chores">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>model.chores</class>
+		<class>controller.LocalDateAttributeConverter</class>
+		<class>model.Assignee</class>
+		<class>model.ListDetails</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/chores"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
 			<property name="javax.persistence.jdbc.password" value="Emerson21$"/>
 		</properties>
 	</persistence-unit>

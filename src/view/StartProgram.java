@@ -39,7 +39,7 @@ public class StartProgram {
 			int timeToComplete = in.nextInt();
 			System.out.print("Enter the age required for this chore: ");
 			int ageRequirement = in.nextInt();
-			chores toDelete = new chores(ageRequirement, assigned, name, timeToComplete);
+			chores toDelete = new chores(name, assigned);
 			lih.deleteItem(toDelete);
 			
 
