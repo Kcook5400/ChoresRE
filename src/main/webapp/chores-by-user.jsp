@@ -16,7 +16,7 @@
 <td><input type="radio" name = "id" value = "${currentlist.id}"></td>
 <td><h2> ${currentlist.listName}</h2></td></tr>
 <tr><td colspan = "3"> Due Date: ${currentlist.dueDate}</td></tr> 
-<tr> <td colspan="3">Assignee: ${currentlist.assignee.Assignee}</td></tr>
+<tr> <td colspan="3">Assignee: ${currentlist.assignee.AssigneeName}</td></tr>
 <c:forEach var = "listVal" items = "${currentlist.listOfitems}">
 <tr><td></td><td colspan="4">Chore: ${listVal.name}</td></tr>
 <tr><td></td><td colspan="4"> Chore Due Date: ${listVal.dueDate}</td></tr>
