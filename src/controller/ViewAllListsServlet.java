@@ -36,6 +36,11 @@ public class ViewAllListsServlet extends HttpServlet {
 		List<ListDetails> abc = alh.getLists();
 		request.setAttribute("allLists", abc); 
 		
+		//I added this to help with troubleshooting to see what was going in.
+		for(ListDetails d: alh.getLists()){
+			System.out.println(d.toString());
+		}
+		
 		if(abc.isEmpty()) {
 			request.setAttribute("allLists", " ");
 		}
