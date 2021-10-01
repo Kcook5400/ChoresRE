@@ -47,11 +47,11 @@ public class Assignee {
 		this.id = id;
 	}
 
-	public String getShopperName() {
+	public String getAssigneeName() {
 		return AssigneeName;
 	}
 
-	public void setShopperName(String AssigneeName) {
+	public void setAssigneeName(String AssigneeName) {
 		this.AssigneeName = AssigneeName;
 	}
 

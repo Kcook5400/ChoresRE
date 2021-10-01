@@ -13,7 +13,7 @@ List Name: <input type = "text" name = "listName"> <br>
 due date: <input type = "text" name = "month" placeholder = "mm" size = "4">
 <input type="text" name = "day" placeholder = "dd" size = "4">
 <input type = "text" name = "year" placeholder = "yyyy" size = "4">
-Assignee Name: <input type = "text" name = "shopperName"><br>
+Assignee Name: <input type = "text" name = "AssigneeName"><br>
 Available Items: <br>
 <select name="allItemsToAdd" multiple size ="6">
 <c:forEach items="${requestScope.allItems}" var = "currentitem">
