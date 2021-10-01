@@ -17,7 +17,7 @@ public class Assignee {
 	@Id
 	@GeneratedValue
 	private int id;
-	private String AssigneeName;
+	private String assigneeName;
 	
 	
 	/**
@@ -27,15 +27,15 @@ public class Assignee {
 		super();
 	}
 	
-	public Assignee(int id, String AssigneeName) {
+	public Assignee(int id, String assigneeName) {
 		super();
 		this.id=id;
-		this.AssigneeName= AssigneeName;
+		this.assigneeName= assigneeName;
 		
 	}
-	public Assignee(String AssigneeName) {
+	public Assignee(String assigneeName) {
 		super();
-		this.AssigneeName= AssigneeName;
+		this.assigneeName= assigneeName;
 		
 	}
 
@@ -48,16 +48,16 @@ public class Assignee {
 	}
 
 	public String getAssigneeName() {
-		return AssigneeName;
+		return assigneeName;
 	}
 
-	public void setAssigneeName(String AssigneeName) {
-		this.AssigneeName = AssigneeName;
+	public void setAssigneeName(String assigneeName) {
+		this.assigneeName = assigneeName;
 	}
 
 	@Override
 	public String toString() {
-		return "Assignee [id=" + id + ", AssigneeName=" + AssigneeName + "]";
+		return "Assignee [id=" + id + ", AssigneeName=" + assigneeName + "]";
 	}
 
 

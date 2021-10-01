@@ -82,19 +82,19 @@ import javax.persistence.OneToOne;
 			this.listName = listName;
 		}
 
-		public LocalDate getdueDate() {
+		public LocalDate getDueDate() {
 			return dueDate;
 		}
 
-		public void setdueDate(LocalDate dueDate) {
+		public void setDueDate(LocalDate dueDate) {
 			this.dueDate = dueDate;
 		}
 
-		public  Assignee  getAssignee() {
+		public Assignee getAssignee() {
 			return assignee;
 		}
 
-		public void setAssignee ( Assignee  assignee) {
+		public void setAssignee(Assignee assignee) {
 			this.assignee = assignee;
 		}
 

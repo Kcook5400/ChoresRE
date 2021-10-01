@@ -41,7 +41,7 @@ public class CreateNewListServlet extends HttpServlet {
 		String month = request.getParameter("month");
 		String day = request.getParameter("day");
 		String year = request.getParameter("year");
-		String AssigneeName = request.getParameter("Assigned");
+		String AssigneeName = request.getParameter("AssigneeName");
 		LocalDate ld;
 		try {
 			ld = LocalDate.of(Integer.parseInt(year),Integer.parseInt(month), Integer.parseInt(day));
