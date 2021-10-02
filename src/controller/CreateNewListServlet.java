@@ -36,7 +36,7 @@ public class CreateNewListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		choresHelper lih = new choresHelper();
 		String listName = request.getParameter("listName");
-		System.out.println("List Name: " + listName);
+
 		
 		String month = request.getParameter("month");
 		String day = request.getParameter("day");

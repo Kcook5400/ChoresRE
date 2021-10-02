@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>shopping list </title>
+<title>Chore Lists </title>
 </head>
 <body>
 <form method= "post" action = "NavigationServlet">
@@ -28,6 +28,6 @@
 
 </form>
 
-
+<a href = "viewAllListsServlet"> View all lists </a> 
 </body>
 </html>

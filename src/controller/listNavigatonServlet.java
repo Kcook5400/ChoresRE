@@ -57,26 +57,6 @@ public class listNavigatonServlet extends HttpServlet {
 				getServletContext().getRequestDispatcher("/viewAllListsServlet").forward(request, response);
 			}
 
-		} else if (act.equals("edit")) {
-			try {
-				Integer tempId = Integer.parseInt(request.getParameter("id"));
-				ListDetails listToEdit = dao.searchForListDetailsById(tempId);
-				request.setAttribute("listToEdit", listToEdit);
-				request.setAttribute("month", listToEdit.getdueDate().getMonthValue());
-				request.setAttribute("date", listToEdit.getdueDate().getDayOfMonth());
-				request.setAttribute("year", listToEdit.getdueDate().getYear());
-				choresHelper daoForItems = new choresHelper();
-				
-				request.setAttribute("allItems", daoForItems.showAllItems());
-							
-				if(daoForItems.showAllItems().isEmpty()){
-						request.setAttribute("allItems", " ");
-				}
-				getServletContext().getRequestDispatcher("/edit-list.jsp").forward(request, response);
-			} catch (NumberFormatException e) {
-				getServletContext().getRequestDispatcher("/viewAllListsServlet").forward(request, response);
-			} 
-
 		} else if (act.equals("add")) {
 			getServletContext().getRequestDispatcher("/new-list.jsp").forward(request, response);
 		}
